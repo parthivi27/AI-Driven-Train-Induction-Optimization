@@ -1,0 +1,120 @@
+.alerts-page {
+  padding: 32px 36px 40px;
+  position: relative;
+  z-index: 1;
+}
+
+.alerts-count {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 16px;
+  background: var(--gold-glow);
+  border: 1px solid var(--gold-border);
+  border-radius: 20px;
+  color: var(--gold);
+  font-size: 0.82rem;
+  font-weight: 500;
+  margin-top: 8px;
+}
+
+.alerts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 760px;
+}
+
+.alert-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 18px 20px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.2s;
+}
+
+.alert-card:hover { transform: translateX(4px); }
+
+.alert-critical { border-color: rgba(224, 92, 107, 0.3); }
+.alert-warning { border-color: rgba(245, 158, 11, 0.3); }
+.alert-info { border-color: rgba(79, 195, 247, 0.15); }
+
+.alert-severity-bar {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+}
+
+.bar-critical { background: var(--accent-rose); }
+.bar-warning { background: var(--accent-amber); }
+.bar-info { background: var(--accent-cyan); }
+
+.alert-icon-wrap {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.icon-critical { background: rgba(224,92,107,0.12); color: var(--accent-rose); }
+.icon-warning { background: rgba(245,158,11,0.12); color: var(--accent-amber); }
+.icon-info { background: rgba(79,195,247,0.12); color: var(--accent-cyan); }
+
+.alert-body { flex: 1; }
+
+.alert-top {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 6px;
+}
+
+.alert-type-label {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  padding: 2px 8px;
+  border-radius: 3px;
+}
+
+.label-critical { background: rgba(224,92,107,0.15); color: var(--accent-rose); }
+.label-warning { background: rgba(245,158,11,0.15); color: var(--accent-amber); }
+.label-info { background: rgba(79,195,247,0.12); color: var(--accent-cyan); }
+
+.alert-line {
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.alert-time {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  margin-left: auto;
+}
+
+.alert-message {
+  font-size: 0.88rem;
+  color: var(--text-primary);
+  line-height: 1.5;
+}
+
+.no-alerts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 60px;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
